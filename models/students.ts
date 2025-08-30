@@ -1,6 +1,6 @@
 export const studentsModel = `
 CREATE TABLE IF NOT EXISTS students(
-  id INTEGER PRIMAY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   surname TEXT NOT NULL,
   otherNames TEXT NOT NULL,
   matricNo VARCHAR NOT NULL,
