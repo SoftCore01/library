@@ -1,0 +1,9 @@
+export const  UserModel = `
+CREATE TABLE IF NOT EXISTS users(
+  userId INTEGER PRIMARY KEY AUTOINCREMENT,
+  surname TEXT NOT NULL,
+  otherNames TEXT NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+`

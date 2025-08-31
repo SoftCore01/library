@@ -1,11 +1,6 @@
 export const studentsModel = `
 CREATE TABLE IF NOT EXISTS students(
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  surname TEXT NOT NULL,
-  otherNames TEXT NOT NULL,
-  matricNo VARCHAR NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL,
+  studentId INTEGER NOT NULL,
   gender VARCHAR(1) NOT NULL,
   level INTEGER NOT NULL,
   academicYear VARCHAR(10) NOT NULL,
@@ -19,6 +14,8 @@ CREATE TABLE IF NOT EXISTS students(
   isCleared INTEGER NOT NULL,
   createdAt DATETIME DEFAULT (datetime('now', 'localtime')) NOT NULL,
   membershipFeePaidAt DATETIME DEFAULT (datetime('now', 'localtime')),
-  membershipExpiresOn DATETIME DEFAULT (datetime('now', 'localtime'))
+  membershipExpiresOn DATETIME DEFAULT (datetime('now', 'localtime')),
+  userId INTEGER NOT NULL,
+  FOREIGN KEY(userId) REFERENCES users(userId)
 );
 `;
